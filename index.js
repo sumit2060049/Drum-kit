@@ -7,8 +7,19 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function () {
    // var audio=new Audio("tom-1.mp3");
     //audio.play();
     var buttonhtml = this.innerHTML;
+    makesound(buttonhtml);
 
-    switch (buttonhtml) {
+    
+    
+});
+
+}
+document.addEventListener("keydown",function(event){
+    makesound(event.key);
+})
+
+function makesound(key){
+    switch (key) {
         case "w":
             var audio=new Audio("tom-1.mp3");
             audio.play();
@@ -42,7 +53,4 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function () {
             console.log(button.InnerHTML);
             break;
     }
-
-});
-
 }
